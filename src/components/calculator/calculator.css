@@ -5,7 +5,8 @@
     overflow: hidden;
     border-radius: 20px;
     background-color: var(--calc-bg);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: 20px 20px 60px var(--shadow-color-first),
+    -20px -20px 60px var(--shadow-color);
 
     display: flex;
     flex-direction: column;
@@ -24,8 +25,21 @@
     border-radius: 10px;
     font-size: 1.25rem;
     font-weight: 500;
-    background-color: transparent;
     color: var(--txt-color);
+    background: linear-gradient(145deg, var(--background-linear-gradient-first), var(--background-linear-gradient));
+    box-shadow:  25px 25px 49px var(--shadow-color-first), -25px -25px 49px var(--shadow-color);
+}
+
+.calculator__btns button:hover {
+    border-radius: 10px;
+    background: linear-gradient(145deg, var(--background-linear-gradient), var(--background-linear-gradient-first));
+    box-shadow:  25px 25px 49px var(--shadow-color-first), -25px -25px 49px var(--shadow-color);
+}
+
+.calculator__btns button:active {
+    border-radius: 10px;
+    background: var(--calc-bg);
+    box-shadow:  inset 25px 25px 49px var(--shadow-color-first), inset -25px -25px 49px var(--shadow-color);
 }
 
 .calculator__btns button:last-child {
@@ -38,9 +52,20 @@
     color: var(--calc-btn-color);
 }
 
+.wrap-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    height: 245px;
+    width: 360px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--background-linear-gradient), var(--background-linear-gradient-first));
+    box-shadow: 20px 20px 60px var(--shadow-color-first), -20px -20px 60px var(--shadow-color);
+}
+
 .calculator__result {
     position: relative;
-    margin-bottom: 20px;
     text-align: right;
     display: flex;
     flex-direction: column;

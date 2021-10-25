@@ -84,9 +84,11 @@ const Calculator = () => {
 
     return (
         <div className="calculator">
-            <div className="calculator__result">
-                <div ref={expRef} className="calculator__result__exp"></div>
-                <div className="calculator__result__exp"></div>
+            <div className="wrap-content">
+                <div className="calculator__result">
+                    <div ref={expRef} className="calculator__result__exp"></div>
+                    <div className="calculator__result__exp"></div>
+                </div>
             </div>
             <div ref={btnsRef} className="calculator__btns">
                 {
